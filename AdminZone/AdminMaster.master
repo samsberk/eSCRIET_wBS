@@ -1,0 +1,61 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMaster.master.cs" Inherits="AdminZone_AdminMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122943421-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-122943421-1');
+    </script>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>     
+    <link id="Link1" runat="server" rel="Shortcut Icon" href="../Images/fi.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Finger+Paint|Gloria+Hallelujah|Homemade+Apple" rel="stylesheet"/>
+    <!--font-family: 'Gloria Hallelujah', cursive; font-family: 'Homemade Apple', cursive; font-family: 'Finger Paint', cursive;-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css"/>
+    <link href="../ExtCSS/MyCSS.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> 
+    <script src="../MyJS/MyJS.js"></script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="background:#f2f2f2;">
+    <form id="form1" runat="server">
+        <div class="container-fluid" style="font-size:18px;">
+            <div class="row text-center">
+                <h3 style="font-weight:bold;"><span class="glyphicon glyphicon-cog"></span> Login Statistics <span class="glyphicon glyphicon-cog"></span></h3>
+                <div class="col-sm-6">
+                    <p style="font-weight:bold;">New Login: 
+                    <asp:Label ID="dtlbl" runat="server"></asp:Label><br />
+                    Login Session: 
+                    <asp:Label ID="Label2" runat="server" Text="30 Min"></asp:Label>&emsp;<a href="Admin_Logout" title="Logout">End Session</a>
+                        <br />Default Cookie Timeout: 30 Min
+                    </p>
+                </div>
+                <div class="col-sm-6">
+                    <p style="font-weight:bold;">Current IP: 
+                    <asp:Label ID="iplbl" runat="server"></asp:Label><br />
+                    Admin ID: 
+                    <asp:Label ID="aid" runat="server" Text="Unauthorized"></asp:Label></p>
+                    
+                </div>
+            </div>
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">        
+            </asp:ContentPlaceHolder>
+        </div>
+        <br /><br /><footer class="container-fluid text-center" style="color:black;">
+        <h4>All Rights Reserved &copy; SCRIET | CVGClub - 2018</h4>
+        <p>Design & Developed by<br /><a href="http://www.facebook.com/samsberk" title="Facebook Profile" target="_blank" style="color:black;text-shadow:1px 1px 10px #ff7885;">Shivam Kumar Vishwakarma</a><br />SCRIET-CCSU, Meerut</p>
+    </footer>
+    </form>
+</body>
+</html>
